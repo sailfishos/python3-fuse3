@@ -1,0 +1,3 @@
+[submodule "pyfuse3"]
+	path = pyfuse3
+	url = https://git.sailfishos.org/mirror/pyfuse3.git
