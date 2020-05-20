@@ -1,6 +1,3 @@
-# fixme: should be defined in base system side
-%define python3_sitearch %(%{__python3} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib(1))")
-
 Name:       python3-fuse3
 Summary:    Python bindings for the fuse3 library
 Version:    2.0.0
@@ -29,7 +26,7 @@ python3 ./setup.py build
 
 %install
 rm -rf %{buildroot}
-python3 ./setup.py install --skip-build --root %{buildroot}
+%py3_install
 
 %files
 %defattr(-,root,root,-)
