@@ -1,6 +1,6 @@
 Name:       python3-fuse3
 Summary:    Python bindings for the fuse3 library
-Version:    2.0.0
+Version:    3.4.0
 Release:    1
 License:    LGPLv2+
 URL:        https://pypi.org/project/pyfuse3/
@@ -25,12 +25,10 @@ python3 ./setup.py build_cython
 python3 ./setup.py build
 
 %install
-rm -rf %{buildroot}
 %py3_install
 
 %files
-%defattr(-,root,root,-)
-%{python3_sitearch}/pyfuse3.cpython-*.so
+%{python3_sitearch}/pyfuse3/
 %{python3_sitearch}/pyfuse3_asyncio.py
 %{python3_sitearch}/_pyfuse3.py
 %{python3_sitearch}/pyfuse3-*.egg-info
